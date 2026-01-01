@@ -1,0 +1,184 @@
+/* RESET */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI', Arial, sans-serif;
+}
+
+body{
+  background:#f5f6f8;
+  color:#333;
+  line-height:1.6;
+}
+
+/* NAVBAR */
+header{
+  background:#fff;
+  box-shadow:0 4px 15px rgba(0,0,0,.08);
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+
+.navbar{
+  max-width:1200px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 20px;
+}
+
+.logo{
+  font-size:24px;
+  font-weight:800;
+}
+
+.logo span{
+  color:#e53935;
+}
+
+.nav-menu{
+  list-style:none;
+  display:flex;
+  gap:25px;
+}
+
+.nav-menu a{
+  text-decoration:none;
+  color:#333;
+  font-weight:600;
+}
+
+/* HERO */
+.hero{
+  background:linear-gradient(135deg,#c62828,#ef5350);
+  color:#fff;
+  padding:100px 20px;
+  text-align:center;
+}
+
+.hero h1{
+  font-size:42px;
+  letter-spacing:1px;
+}
+
+.hero p{
+  margin:15px auto 30px;
+  max-width:600px;
+}
+
+.btn-primary{
+  background:#fff;
+  color:#c62828;
+  padding:14px 36px;
+  border-radius:30px;
+  font-weight:700;
+  text-decoration:none;
+}
+
+/* ABOUT */
+.about{
+  max-width:900px;
+  margin:80px auto;
+  padding:0 20px;
+  text-align:center;
+}
+
+.about h2{
+  font-size:32px;
+  color:#c62828;
+  margin-bottom:20px;
+}
+
+/* SERVICES */
+.services{
+  background:#fff;
+  padding:80px 20px;
+}
+
+.services h2{
+  text-align:center;
+  font-size:32px;
+  color:#c62828;
+  margin-bottom:40px;
+}
+
+.service-grid{
+  max-width:1000px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:25px;
+}
+
+.service-card{
+  background:#f9f9f9;
+  padding:30px;
+  border-radius:15px;
+  text-align:center;
+  font-weight:700;
+  box-shadow:0 8px 20px rgba(0,0,0,.08);
+  transition:.3s;
+}
+
+.service-card:hover{
+  transform:translateY(-8px);
+}
+
+/* CONTACT */
+.contact{
+  max-width:900px;
+  margin:80px auto;
+  padding:0 20px;
+  text-align:center;
+}
+
+.contact h2{
+  font-size:32px;
+  color:#c62828;
+  margin-bottom:30px;
+}
+
+.contact-box{
+  background:#fff;
+  padding:40px;
+  border-radius:18px;
+  box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.btn-secondary{
+  display:inline-block;
+  margin-top:20px;
+  background:#c62828;
+  color:#fff;
+  padding:12px 30px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:700;
+}
+
+/* FOOTER */
+footer{
+  background:#111;
+  color:#fff;
+  text-align:center;
+  padding:25px;
+  margin-top:80px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .nav-menu{
+    display:none;
+  }
+
+  .hero h1{
+    font-size:30px;
+  }
+
+  .about, .contact{
+    margin:60px auto;
+  }
+}
