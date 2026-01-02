@@ -99,18 +99,37 @@
       header h1{font-size:40px}
       .about{grid-template-columns:1fr}
     }
-  </style>
+    .nav-container{display:flex;justify-content:space-between;align-items:center;padding:15px 10%}
+  .logo{font-weight:700;color:#3e2723;font-size:20px}
+  .hamburger{display:none;flex-direction:column;cursor:pointer}
+  .hamburger span{height:3px;width:25px;background:#3e2723;margin:4px 0;border-radius:3px}
+  @media(max-width:900px){
+    nav ul{display:none;flex-direction:column;background:#fff;position:absolute;top:65px;right:20px;width:200px;border-radius:15px;box-shadow:0 10px 25px rgba(0,0,0,.2)}
+    nav ul.show{display:flex}
+    nav ul li{margin:15px}
+    .hamburger{display:flex}
+  }
+</style>
 </head>
 <body>
 
 <nav>
-  <ul>
-    <li><a href="#home">Beranda</a></li>
-    <li><a href="#about">Tentang</a></li>
-    <li><a href="#info">Info</a></li>
-    <li><a href="#gallery">Galeri</a></li>
-    <li><a href="#contact">Kontak</a></li>
-  </ul>
+  <div class="nav-container">
+    <div class="logo">Coffee Scay</div>
+    <ul id="navMenu">
+      <li><a href="#home">Beranda</a></li>
+      <li><a href="#about">Tentang</a></li>
+      <li><a href="#info">Info</a></li>
+      <li><a href="#hours">Jam</a></li>
+      <li><a href="#gallery">Galeri</a></li>
+      <li><a href="#contact">Kontak</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
 </nav>
 
 <header id="home">
@@ -219,6 +238,9 @@
   }
   updateStatus();
   setInterval(updateStatus,60000);
+  function toggleMenu(){
+    document.getElementById('navMenu').classList.toggle('show');
+  }
 </script>
 
 <section id="contact">
