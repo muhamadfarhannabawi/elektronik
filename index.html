@@ -1,78 +1,285 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TB Elektronik | Elektronik Bekas & Rongsokan</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coffee Scay | Kedai Kopi Sepatan</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+    body{background:#f3efe9;color:#333;scroll-behavior:smooth}
+
+    /* HERO */
+    header{
+      min-height:100vh;
+      background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+      url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085');
+      background-size:cover;
+      background-position:center;
+      color:#fff;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      padding:20px;
+    }
+    header h1{font-size:56px;font-weight:700;letter-spacing:2px}
+    header p{font-size:20px;margin:15px 0 30px}
+    .cta{
+      padding:15px 40px;
+      background:#c7a17a;
+      color:#fff;
+      border-radius:50px;
+      text-decoration:none;
+      font-weight:600;
+      transition:.3s;
+    }
+    .cta:hover{background:#a67c52;transform:translateY(-3px)}
+
+    /* NAV */
+    nav{
+      position:fixed;top:0;left:0;width:100%;
+      background:rgba(255,255,255,.95);
+      box-shadow:0 4px 15px rgba(0,0,0,.1);
+      z-index:100;
+    }
+    nav ul{display:flex;justify-content:center;list-style:none;padding:15px}
+    nav ul li{margin:0 20px}
+    nav ul li a{text-decoration:none;color:#3e2723;font-weight:600}
+    nav ul li a:hover{color:#c7a17a}
+
+    section{padding:100px 10%}
+    .section-title{text-align:center;margin-bottom:60px}
+    .section-title h2{font-size:36px;color:#3e2723}
+    .section-title span{color:#c7a17a}
+
+    /* ABOUT */
+    .about{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+    .about img{width:100%;border-radius:25px;box-shadow:0 20px 40px rgba(0,0,0,.25)}
+    .about p{line-height:1.9;font-size:17px}
+
+    /* FEATURES */
+    .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px}
+    .card{
+      background:#fff;
+      padding:40px 30px;
+      border-radius:25px;
+      box-shadow:0 15px 35px rgba(0,0,0,.12);
+      text-align:center;
+      transition:.3s;
+    }
+    .card:hover{transform:translateY(-10px)}
+    .card h3{margin-bottom:10px;color:#3e2723}
+
+    /* GALLERY */
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px}
+    .gallery img{
+      width:100%;
+      height:280px;
+      object-fit:cover;
+      border-radius:25px;
+      transition:.4s;
+    }
+    .gallery img:hover{transform:scale(1.08)}
+
+    /* CONTACT */
+    .contact-box{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px}
+    .map iframe{width:100%;height:380px;border:0;border-radius:25px}
+
+    footer{
+      background:#2b1b17;
+      color:#fff;
+      text-align:center;
+      padding:30px;
+      margin-top:80px
+    }
+
+    @media(max-width:900px){
+      header h1{font-size:40px}
+      .about{grid-template-columns:1fr}
+    }
+  </style>
 </head>
 <body>
 
-<!-- NAVBAR -->
-<header>
-  <nav class="navbar">
-    <div class="logo">TB <span>Elektronik</span></div>
-    <ul class="nav-menu">
-      <li><a href="#home">Beranda</a></li>
-      <li><a href="#about">Tentang</a></li>
-      <li><a href="#services">Layanan</a></li>
-      <li><a href="#contact">Kontak</a></li>
-    </ul>
-  </nav>
+<nav>
+  <ul>
+    <li><a href="#home">Beranda</a></li>
+    <li><a href="#about">Tentang</a></li>
+    <li><a href="#info">Info</a></li>
+    <li><a href="#gallery">Galeri</a></li>
+    <li><a href="#contact">Kontak</a></li>
+  </ul>
+</nav>
+
+<header id="home">
+  <h1>Coffee Scay</h1>
+  <p>Ngopi Santai • Harga Bersahabat • Sepatan</p>
+  <a href="#contact" class="cta">Kunjungi Sekarang</a>
 </header>
 
-<!-- HERO -->
-<section class="hero" id="home">
-  <div class="hero-content">
-    <h1>TB ELEKTRONIK</h1>
-    <p>Menerima barang elektronik bekas & rongsokan dengan harga bersaing</p>
-    <a href="https://wa.me/6285717837119" class="btn-primary">Hubungi via WhatsApp</a>
+<section id="about">
+  <div class="section-title">
+    <h2>Tentang <span>Coffee Scay</span></h2>
+  </div>
+  <div class="about">
+    <div>
+      <p><strong>Coffee Scay</strong> adalah kedai kopi modern dengan suasana hangat dan nyaman di kawasan Sepatan, Tangerang. Cocok untuk nongkrong, kerja, atau quality time bersama teman.</p>
+      <p>Dengan rating <strong>4.9 ⭐</strong>, Coffee Scay dikenal karena cita rasa kopi berkualitas, pelayanan ramah, dan harga ramah kantong.</p>
+    </div>
+    <img src="https://images.unsplash.com/photo-1517705008128-361805f42e86" alt="Coffee Shop">
   </div>
 </section>
 
-<!-- ABOUT -->
-<section class="about" id="about">
-  <h2>Tentang Kami</h2>
-  <p>
-    TB Elektronik adalah usaha terpercaya di Sepatan Tangerang yang melayani
-    penerimaan barang elektronik bekas dan rongsokan seperti TV, kulkas,
-    komputer, mesin cuci, dan lainnya. Kami melayani dengan cepat, jujur,
-    dan profesional.
-  </p>
-</section>
-
-<!-- SERVICES -->
-<section class="services" id="services">
-  <h2>Barang yang Kami Terima</h2>
-  <div class="service-grid">
-    <div class="service-card">TV & LED</div>
-    <div class="service-card">Kulkas</div>
-    <div class="service-card">Laptop</div>
-    <div class="service-card">Komputer</div>
-    <div class="service-card">Kipas Angin</div>
-    <div class="service-card">Mesin Cuci</div>
-    <div class="service-card">Barang Elektronik Lainnya</div>
+<section id="info">
+  <div class="section-title">
+    <h2>Kenapa <span>Coffee Scay?</span></h2>
+  </div>
+  <div class="features">
+    <div class="card"><h3>Harga Terjangkau</h3><p>Mulai Rp1.000 – Rp25.000</p></div>
+    <div class="card"><h3>Tempat Nyaman</h3><p>Cocok nongkrong & kerja santai</p></div>
+    <div class="card"><h3>Buka Setiap Hari</h3><p>Mulai pukul 11.00 WIB</p></div>
   </div>
 </section>
 
-<!-- CONTACT -->
-<section class="contact" id="contact">
-  <h2>Kontak & Alamat</h2>
+<section id="gallery">
+  <div class="section-title">
+    <h2>Galeri <span>Kedai</span></h2>
+  </div>
+  <div class="gallery">
+    <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93">
+    <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348">
+    <img src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0">
+  </div>
+</section>
+
+<section id="hours">
+  <div class="section-title">
+    <h2>Status & <span>Jam Ramai</span></h2>
+  </div>
+
+  <div class="features">
+    <div class="card">
+      <h3>Status Realtime</h3>
+      <p id="statusText" style="font-size:18px;font-weight:600;margin-top:10px">Memuat status...</p>
+      <small id="statusNote"></small>
+    </div>
+
+    <div class="card">
+      <h3>Jam Operasional</h3>
+      <p>
+        Senin–Jumat: 11.00 – 23.00<br>
+        Sabtu: 11.30 – 23.30<br>
+        Minggu: 12.00 – 23.30<br>
+        <small>Hari libur nasional dapat berbeda</small>
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Jam Ramai (Estimasi)</h3>
+      <div style="margin-top:15px">
+        <div>12.00<div class="bar"><span style="width:40%"></span></div></div>
+        <div>15.00<div class="bar"><span style="width:80%"></span></div></div>
+        <div>18.00<div class="bar"><span style="width:70%"></span></div></div>
+        <div>21.00<div class="bar"><span style="width:50%"></span></div></div>
+        <small style="display:block;margin-top:10px">Pukul 15.00 biasanya sedikit ramai</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .bar{background:#eee;border-radius:20px;height:10px;margin:5px 0 15px}
+  .bar span{display:block;height:100%;background:#c7a17a;border-radius:20px}
+</style>
+
+<script>
+  function updateStatus(){
+    const now = new Date();
+    const day = now.getDay(); // 0 Minggu
+    const hour = now.getHours() + now.getMinutes()/60;
+
+    let open = 11, close = 23;
+    if(day === 6){ open = 11.5; close = 23.5 } // Sabtu
+    if(day === 0){ open = 12; close = 23.5 } // Minggu
+
+    const statusText = document.getElementById('statusText');
+    const statusNote = document.getElementById('statusNote');
+
+    if(hour >= open && hour < close){
+      statusText.innerHTML = '🟢 Buka Sekarang';
+      statusText.style.color = '#2e7d32';
+      statusNote.innerHTML = 'Tutup pukul ' + close.toString().replace('.5', '.30');
+    }else{
+      statusText.innerHTML = '🔴 Tutup';
+      statusText.style.color = '#c62828';
+      statusNote.innerHTML = 'Buka kembali pukul ' + open.toString().replace('.5', '.30');
+    }
+  }
+  updateStatus();
+  setInterval(updateStatus,60000);
+</script>
+
+<section id="contact">
+  <div class="section-title">
+    <h2>Lokasi & <span>Kontak</span></h2>
+  </div>
   <div class="contact-box">
-    <p><strong>Alamat:</strong><br>
-      Jln Raya Mauk KM 11, Sepatan, Tangerang
-    </p>
-    <p><strong>Telepon:</strong><br>
-      0857 1783 7119 / 0878 1364 6867
-    </p>
-    <a href="tel:085717837119" class="btn-secondary">Telepon Sekarang</a>
+    <div class="card">
+      <h3>Aksi Cepat</h3>
+      <p style="margin-top:15px">
+        <a href="https://www.google.com/maps?q=VHW7+3R+Kosambi+Kabupaten+Tangerang" target="_blank" style="display:inline-block;margin:8px;padding:12px 25px;background:#1a73e8;color:#fff;border-radius:30px;text-decoration:none;font-weight:600">📍 Buka di Google Maps</a><br>
+        <a href="tel:085217681514" style="display:inline-block;margin:8px;padding:12px 25px;background:#2e7d32;color:#fff;border-radius:30px;text-decoration:none;font-weight:600">📞 Telepon</a><br>
+        <a href="https://wa.me/6285217681514" target="_blank" style="display:inline-block;margin:8px;padding:12px 25px;background:#25D366;color:#fff;border-radius:30px;text-decoration:none;font-weight:600">💬 WhatsApp</a>
+      </p>
+    </div>
+    <div class="card"><h3>Alamat</h3><p>Jl. Raya Mauk, Pisangan Jaya, Kec. Sepatan, Kab. Tangerang</p></div>
+    <div class="card"><h3>Telepon</h3><p>0852-1768-1514</p></div>
+  </div>
+  <div class="map" style="margin-top:50px">
+    <iframe src="https://www.google.com/maps?q=VHW7+3R%20Kosambi%20Kabupaten%20Tangerang&output=embed"></iframe>
   </div>
 </section>
 
-<!-- FOOTER -->
+<section id="detail">
+  <div class="section-title">
+    <h2>Detail <span>Lengkap</span></h2>
+  </div>
+  <div class="features">
+    <div class="card"><h3>Opsi Layanan</h3><p>✔ Makan di tempat<br>✔ Bawa pulang</p></div>
+    <div class="card"><h3>Keunggulan</h3><p>✔ Kopi enak<br>✔ Pilihan teh enak</p></div>
+    <div class="card"><h3>Populer Untuk</h3><p>✔ Makan sendiri<br>✔ Kerja dengan laptop</p></div>
+    <div class="card"><h3>Penawaran</h3><p>✔ Cepat saji<br>✔ Aneka kopi</p></div>
+    <div class="card"><h3>Pilihan Makan</h3><p>✔ Makan malam<br>✔ Layanan pesan di meja</p></div>
+    <div class="card"><h3>Fasilitas</h3><p>✔ Toilet</p></div>
+    <div class="card"><h3>Suasana</h3><p>✔ Nyaman<br>✔ Santai<br>✔ Tenang<br>✔ Trendi</p></div>
+    <div class="card"><h3>Tipe Pengunjung</h3><p>✔ Berkelompok<br>✔ Mahasiswa</p></div>
+    <div class="card"><h3>Pembayaran</h3><p>✔ Kartu debit<br>✔ Pembayaran seluler (NFC)</p></div>
+    <div class="card"><h3>Anak-anak</h3><p>✔ Cocok untuk anak-anak</p></div>
+  </div>
+</section>
+
 <footer>
-  <p>© 2026 TB Elektronik – Sepatan Tangerang</p>
-</footer>
+  <p>© 2026 Coffee Scay • Ngopi dengan Gaya</p>
+<section id="testimoni">
+  <div class="section-title">
+    <h2>Apa Kata <span>Pelanggan</span></h2>
+  </div>
+  <div class="features">
+    <div class="card"><p>⭐️⭐️⭐️⭐️⭐️</p><p>"Kopinya enak, tempatnya nyaman buat kerja."</p><strong>- Pelanggan Google</strong></div>
+    <div class="card"><p>⭐️⭐️⭐️⭐️⭐️</p><p>"Harga ramah, suasana santai dan trendi."</p><strong>- Pelanggan Google</strong></div>
+    <div class="card"><p>⭐️⭐️⭐️⭐️⭐️</p><p>"Rekomendasi banget buat nongkrong sore."</p><strong>- Pelanggan Google</strong></div>
+  </div>
+</section>
+
+<div class="floating">
+  <a href="https://wa.me/6285217681514" target="_blank">💬</a>
+</div>
+
+<button id="darkToggle">🌙</button>
+
+<footer>
 
 </body>
 </html>
