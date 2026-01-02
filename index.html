@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <title>Coffee Scay | Kedai Kopi Sepatan</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
@@ -96,9 +96,13 @@
     }
 
     @media(max-width:900px){
-      header h1{font-size:40px}
+    nav ul{display:none !important;flex-direction:column;background:#fff;position:absolute;top:65px;right:20px;width:220px;border-radius:15px;box-shadow:0 10px 25px rgba(0,0,0,.2);z-index:999}
+    nav ul.show{display:flex !important}
+    nav ul li{margin:15px}
+    .hamburger{display:flex !important}
+  }
       .about{grid-template-columns:1fr}
-    }
+    
     .nav-container{display:flex;justify-content:space-between;align-items:center;padding:15px 10%}
   .logo{font-weight:700;color:#3e2723;font-size:20px}
   .hamburger{display:none;flex-direction:column;cursor:pointer}
@@ -289,19 +293,12 @@
     <h2>Apa Kata <span>Pelanggan</span></h2>
   </div>
   <div class="features">
-    <div class="card"><p>⭐️⭐️⭐️⭐️⭐️</p><p>"Kopinya enak, tempatnya nyaman buat kerja."</p><strong>- Pelanggan Google</strong></div>
-    <div class="card"><p>⭐️⭐️⭐️⭐️⭐️</p><p>"Harga ramah, suasana santai dan trendi."</p><strong>- Pelanggan Google</strong></div>
-    <div class="card"><p>⭐️⭐️⭐️⭐️⭐️</p><p>"Rekomendasi banget buat nongkrong sore."</p><strong>- Pelanggan Google</strong></div>
+    <div class="card">⭐⭐⭐⭐⭐<br>"Kopinya enak, tempatnya nyaman."</div>
+    <div class="card">⭐⭐⭐⭐⭐<br>"Harga ramah dan santai."</div>
+    <div class="card">⭐⭐⭐⭐⭐<br>"Rekomendasi nongkrong."</div>
   </div>
 </section>
 
-<div class="floating">
-  <a href="https://wa.me/6285217681514" target="_blank">💬</a>
-</div>
-
-<button id="darkToggle">🌙</button>
-
 <footer>
-
-</body>
-</html>
+  <p>© 2026 Coffee Scay • Ngopi dengan Gaya</p>
+</footer>
