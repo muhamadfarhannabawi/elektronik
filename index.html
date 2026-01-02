@@ -223,9 +223,9 @@
     const day = now.getDay(); // 0 Minggu
     const hour = now.getHours() + now.getMinutes()/60;
 
-    let open = 11, close = 23;
-    if(day === 6){ open = 11.5; close = 23.5 } // Sabtu
-    if(day === 0){ open = 12; close = 23.5 } // Minggu
+    let open = 11.00, close = 23.00; // Senin-Jumat
+    if(day === 6){ open = 11.30; close = 23.30} // Sabtu
+    if(day === 0){ open = 12.00; close = 23.50 } // Minggu
 
     const statusText = document.getElementById('statusText');
     const statusNote = document.getElementById('statusNote');
@@ -255,7 +255,7 @@
     <div class="card">
       <h3>Aksi Cepat</h3>
       <p style="margin-top:15px">
-        <a href="https://www.google.com/maps?q=VHW7+3R+Kosambi+Kabupaten+Tangerang" target="_blank" style="display:inline-block;margin:8px;padding:12px 25px;background:#1a73e8;color:#fff;border-radius:30px;text-decoration:none;font-weight:600">📍 Buka di Google Maps</a><br>
+        <a href="https://maps.app.goo.gl/mtEAEXL5Ta2AzdKm6" target="_blank" style="display:inline-block;margin:8px;padding:12px 25px;background:#1a73e8;color:#fff;border-radius:30px;text-decoration:none;font-weight:600">📍 Buka di Google Maps</a><br>
         <a href="tel:085217681514" style="display:inline-block;margin:8px;padding:12px 25px;background:#2e7d32;color:#fff;border-radius:30px;text-decoration:none;font-weight:600">📞 Telepon</a><br>
         <a href="https://wa.me/6285217681514" target="_blank" style="display:inline-block;margin:8px;padding:12px 25px;background:#25D366;color:#fff;border-radius:30px;text-decoration:none;font-weight:600">💬 WhatsApp</a>
       </p>
