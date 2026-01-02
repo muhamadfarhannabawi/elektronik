@@ -169,9 +169,9 @@ footer{
 }
 
 /* RESPONSIVE */
-@media(max-width:900px){
+@media (max-width: 900px){
   nav ul{
-    display:none !important;
+    display:none;
     flex-direction:column;
     background:#fff;
     position:absolute;
@@ -184,11 +184,19 @@ footer{
   }
 
   nav ul.show{
-    display:flex !important;
+    display:flex;
+  }
+
+  nav ul li{
+    margin:15px;
   }
 
   .hamburger{
-    display:flex !important;
+    display:flex;
+  }
+
+  .about{
+    grid-template-columns:1fr;
   }
 }
 
